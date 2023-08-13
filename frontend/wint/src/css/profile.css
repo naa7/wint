@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+
+/* .profile-page-container::before {
+  content: "";
+  position: fixed;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  z-index: -10;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.8),
+    transparent,
+    rgba(255, 255, 255, 0.8)
+  );
+
+  animation: backgroundAnimation3 8s linear infinite;
+}
+
+@keyframes backgroundAnimation3 {
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 5% auto;
+  padding: 20px;
+  background-color: #000000;
+  box-shadow: 0 0 10px rgb(255, 6, 6);
+  border-radius: 5%;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+.container:hover {
+  position: relative;
+  max-width: 800px;
+  margin: 5% auto;
+  padding: 20px;
+  background-color: #a31313;
+  box-shadow: 0 0 15px rgb(255, 255, 255);
+  border-radius: 5%;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 0.9;
+  }
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border-radius: 5%;
+  background: linear-gradient(135deg, #ff8c00, #ff0080);
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.profile-card {
+  text-align: center;
+  padding: 10px;
+  background-color: #000000c5;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-20px);
+  opacity: 0;
+  animation: slideIn 1s 0.5s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+.profile-image {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 37%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  align-self: center;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay span {
+  color: #fff;
+  font-size: 16px;
+}
+
+.profile-image:hover .overlay {
+  opacity: 1;
+}
+
+.profile-info-box {
+  margin-top: 20px;
+}
+
+.profile-info-table {
+  width: 100%;
+  background-color: #00000050;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.301);
+  border-collapse: separate;
+  border-spacing: 20px;
+  transform: translateY(-20px);
+  opacity: 0;
+  animation: slideIn 1s 0.5s forwards;
+}
+
+.profile-info-label {
+  color: #fff;
+  padding: 10px;
+}
+
+.profile-info-table td {
+  font-weight: 600;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  border-bottom: 1px solid #444;
+}
+
+.profile-info-table tr:last-child td {
+  border-bottom: none;
+}
+
+.delete-button {
+  font-family: "Oswald", "Raleway", sans-serif;
+  background-color: #ff7300;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+.delete-button:hover {
+  transform: scale(1.05);
+  background-color: #ff0000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.301);
+}

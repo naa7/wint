@@ -1,0 +1,81 @@
+.nav-outer-container {
+  width: 100%;
+}
+
+.nav-container {
+  background-color: #000000d0;
+  width: 100%;
+  opacity: 1;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 0;
+  position: relative;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60%;
+  height: 2px;
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-item:hover::after {
+  opacity: 1;
+}
+
+.nav-links button {
+  background-color: #25252500;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 0;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-links button img {
+  width: 40%;
+  height: 40%;
+}
+
+.nav-links .button-text {
+  margin-top: 5px;
+  font-family: "Oswald", sans-serif;
+  color: aliceblue;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.nav-links .login-button-text {
+  margin-left: 10px;
+}
+
+.nav-links button:hover {
+  color: #ffffff;
+  font-weight: 900;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
